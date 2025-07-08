@@ -14,8 +14,8 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
-    color: #fff
-    ;
+    color: #fff;
+   /* min-height: 2000px;*/
 }
 /* Navbar */
 .navbar {
@@ -88,6 +88,64 @@ body{
     }
 }
 
+/* hero section */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(img/about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: linear-gradient(0deg,rgba(1,1,3,1)3%,rgba(255,255,255,0) 25%);
+}
+
+.hero .content{
+    padding: 1.5rem 7%;
+    max-width: 100rem;
+}
+
+.hero .content h1 {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 1px,1px,3px rgba(1,1,3,0.5);
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero.content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px,1px,3px rgba(1,1,3,0.5);
+    mix-blend-mode: difference;
+}
+
+.hero .content .cta{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4;
+    color: #fff;
+    background-color: var(--primary);
+    border: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
+
 /* laptop */
 @media(max-width: 1366px){
     html {
@@ -134,10 +192,57 @@ body{
     .navbar .navbar-nav a:hover::after {
         transform: scaleX(0.2);
     }
+    .about .row {
+        flex-wrap: wrap;
+    }
+    .about .row .about-img {
+        height: 24rem;
+        object-fit: cover;
+    }
 }
 
 
+/* about */
+.about {
+    padding: 1.4rem 7%;
+}
 
+.about h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span {
+    color: var(--primary);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img  {
+    flex: 1 1 45rem;
+}
+.about .row .about-img img {
+    width: 100%;
+}
+.about .row .content{
+    flex: 1 1 3rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.4rem ;
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.8;
+}
 
 /* hp */
 @media(max-width: 450px){
